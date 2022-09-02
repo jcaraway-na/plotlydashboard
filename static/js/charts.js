@@ -49,7 +49,7 @@ function buildMetadata(sample) {
     // Hint: Inside the loop, you will need to use d3 to append new
     // tags for each key-value in the metadata.
     Object.entries(result).forEach(([key, value]) => {
-      PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
+      PANEL.append("p").text(`${key.toUpperCase()}: ${value}`);
     });
 
   });
@@ -166,9 +166,30 @@ function buildCharts(sample) {
     var washFreq = +filterMetadata[0].wfreq;
 
     // 4. Create the trace for the gauge chart.
+
+    function colors(wf){
+      if(wf <=2){
+        return "red";
+      }
+      else if(wf > 2 && wf <= 4){
+        return "orange";
+      }
+      else if(wf > 4 && wf <= 6){
+        return "yellow";
+      }
+      else if(wf > 6 && wf <= 8){
+        return "blue";
+      }
+      else if(wf > 8 && wf <= 10){
+        return "green";
+      }
+    };
+      
+
+    
     var gaugeData = [
       {
-        title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per week" },
+        title: { text: "<b class='small-font'>Belly Button Washing Frequency</b><br>Scrubs per week" },
         domain: { x: [0, 1], y: [0, 1] },
         type: "indicator",
         mode: "gauge+number",
@@ -180,7 +201,7 @@ function buildCharts(sample) {
             tickvals: [0, 2, 4, 6, 8, 10],
             ticktext: [0, 2, 4, 6, 8, 10]
           },
-          bar: { color: "white" },
+          bar: { color: "black"},
           steps: [
             { range: [0, 2], color: "red" },
             { range: [2, 4], color: "orange" },
@@ -193,7 +214,7 @@ function buildCharts(sample) {
 
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
-      text: "The gauge displays your belly button weekly washing frequency",
+      text: "washing frequency",
       autosize: true,
       annotations: [{
         x: 0.5,
