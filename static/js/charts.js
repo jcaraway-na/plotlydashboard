@@ -98,7 +98,6 @@ function buildCharts(sample) {
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
       xaxis: {
         gridcolor: 'rgba(0,0,0,.2)'
       },
@@ -141,7 +140,6 @@ function buildCharts(sample) {
     console.log(bubbleData);
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: 'Bacteria Cultures Per Sample',
       showlegend: false,
       xaxis: { title: "OTU ID", gridcolor: 'rgba(0,0,0,.2)', automargin: true },
       yaxis: { gridcolor: 'rgba(0,0,0,.2)', automargin: true },
@@ -185,11 +183,8 @@ function buildCharts(sample) {
       }
     };
       
-
-    
     var gaugeData = [
       {
-        title: { text: "<b class='small-font'>Belly Button Washing Frequency</b><br>Scrubs per week" },
         domain: { x: [0, 1], y: [0, 1] },
         type: "indicator",
         mode: "gauge+number",
@@ -214,7 +209,6 @@ function buildCharts(sample) {
 
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
-      text: "washing frequency",
       autosize: true,
       annotations: [{
         x: 0.5,

@@ -26,6 +26,11 @@ align-items: center;
     font-weight: bold;
 }
 
+.large-font{
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .webcontainer{
     width: auto;
     height: 100%;

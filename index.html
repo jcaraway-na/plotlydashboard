@@ -27,13 +27,13 @@
     <div class="container-fluid">
       <div class="row white div-image">
         <div class="col-sm-1">
-          <a href="#"><object data="static/images/NSIGHT_Horiz_Black.svg" width="100" height="45">
+          <a href="https://nsight-analytics.com/"><object data="static/images/NSIGHT_Horiz_Black.svg" width="80" height="45">
             </object></a>
         </div> 
         <div class="col">
         </div>
         <div class="col-sm-1 div-image div-margin">
-          <a href="#"><object style="margin-top: 10px;" data="static/images/1024px-Texas_Longhorns_logo.svg.png" width="100" height="45">
+          <a href="https://professionaled.utexas.edu/"><object style="margin-top: 10px;" data="static/images/1024px-Texas_Longhorns_logo.svg.png" width="80" height="30">
           </object></a>
         </div>
       </div>
@@ -48,7 +48,9 @@
         <div class="col-md-3 div-">
           <div style="margin-top: 10px; height: 12%; margin-left: 0px;" class="col panels div-chart">
             <div class="well">
-              <h5>Test Subject ID No.:</h5>
+              <caption style="caption-side:top;">
+                <p style="text-align: left;" class="medium-font">Test Subject ID No.:</p>
+              </caption>
               <!-- <select id="selDataset"></select> -->
               <select style="color: white;" id="selDataset" class="btn purple dropdown-toggle" onchange="optionChanged(this.value)"></select>
             </div>
@@ -56,18 +58,29 @@
           <div style="margin-top: 15px; height: auto;"  class="col panels div-chart">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h5 class="panel-title">Demographic Info</h5>
+                <caption style="caption-side:top;">
+                  <p style="text-align: left;" class="large-font">Demographic Info</p>
+                </caption>
               </div>
               <div id="sample-metadata" class="panel-body medium-font"></div>
             </div>
           </div>
           <div id="gauge" style="margin-top: 15px; margin-bottom:5%; height: 300px;"  class="col panels div-chart">
-
+            <caption style="caption-side:top;">
+              <p style="text-align: center;" class="large-font">Belly Button Washing Frequency</p>
+              <p style="text-align: center;" class="medium-font">Scrubs per week</p>
+            </caption>
             </div>
         </div>
         <div style="height: 690px;" id="bubble" class="col-md-6 panels div-chart div-margin text-center">
+          <caption style="caption-side:top;">
+            <p style="text-align: center;" class="large-font">Bacteria Cultures Per Sample</p>
+          </caption>
         </div>
           <div style="height: 690px;" id="bar" class="col panels div-chart div-margin text-center">
+            <caption style="caption-side:top;">
+              <p style="text-align: center;" class="large-font">Top 10 Bacteria Cultures Found</p>
+            </caption>
           </div>
       </div>
     </div>
