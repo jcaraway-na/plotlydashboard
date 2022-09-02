@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="static/css/colors.css">
+  <link rel="stylesheet" href="static/css/tables.css">
+  <link rel="stylesheet" href="static/css/forms.css">
+  <link rel="stylesheet" href="static/css/panels.css">
+
+  <!-- include components -->
+  <script src="https://unpkg.com/d3@7.6.1/dist/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="light-gry">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row white div-image">
+        <div class="col-sm-1">
+          <a href="#"><object data="static/images/NSIGHT_Horiz_Black.svg" width="100" height="45">
+            </object></a>
+        </div> 
+        <div class="col">
+        </div>
+        <div class="col-sm-1 div-image div-margin">
+          <a href="#"><object style="margin-top: 10px;" data="static/images/1024px-Texas_Longhorns_logo.svg.png" width="100" height="45">
+          </object></a>
+        </div>
+      </div>
+
+      <div style="height: 100%;" class="row ">
+          <div class="col panels div-chart div-margin text-center">
+            <h1>Belly Button Biodiversity Dashboard</h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-3 div-">
+          <div style="margin-top: 10px; height: 100px; margin-left: 0px;" class="col panels div-chart">
+            <div class="well">
+              <h5>Test Subject ID No.:</h5>
+              <!-- <select id="selDataset"></select> -->
+              <select style="color: white;" id="selDataset" class="btn purple dropdown-toggle" onchange="optionChanged(this.value)"></select>
+            </div>
+          </div>
+          <div style="margin-top: 15px; height: 260px;"  class="col panels div-chart">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Demographic Info</h3>
+              </div>
+              <div id="sample-metadata" class="panel-body"></div>
+            </div>
+          </div>
+          <div id="gauge" style="margin-top: 15px;height: 300px;"  class="col panels div-chart">
+
+            </div>
+        </div>
+        <div style="height: 690px;" id="bubble" class="col-md-6 panels div-chart div-margin text-center">
+        </div>
+          <div style="height: 690px;" id="bar" class="col panels div-chart div-margin text-center">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>

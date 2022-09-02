@@ -1,0 +1,18 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.div-margin{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.div-image{
+align-items: center;
+}
+.div-top-btm-margin{
+    margin-top: 0;
+    margin-bottom: 10;
+}
